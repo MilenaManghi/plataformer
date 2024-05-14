@@ -1808,7 +1808,7 @@ Transform:
   m_GameObject: {fileID: 1300234828}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.377, y: 0.060261067, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.4635467, z: 0.87673163}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2507,7 +2507,7 @@ MonoBehaviour:
   - {fileID: 38320822}
   - {fileID: 290174653}
   - {fileID: 1954705120}
-  - {fileID: 7694264742084601876}
+  - {fileID: 0}
 --- !u!4 &2015377081
 Transform:
   m_ObjectHideFlags: 0
@@ -3513,27 +3513,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1711289166}
   m_SourcePrefab: {fileID: 100100000, guid: 7030d8144298b064c875e9279e5e5918, type: 3}
---- !u!114 &7694264742084601876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8412767992992674855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4edce82d10e9bf40a1936572654861c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 0
-  speed: 7
-  playerNumber: 7
-  rb: {fileID: 902174357215677970}
-  floor:
-    serializedVersion: 2
-    m_Bits: 512
-  distanceRay: 1
-  downDistanceRay: 0.5
 --- !u!1001 &7784468982615015747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3691,7 +3670,7 @@ GameObject:
   - component: {fileID: 3207305336902922271}
   - component: {fileID: 902174357215677970}
   - component: {fileID: 8412767992992674856}
-  - component: {fileID: 7694264742084601876}
+  - component: {fileID: 8412767992992674857}
   m_Layer: 10
   m_Name: Player7
   m_TagString: Player
@@ -3711,10 +3690,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a6dbb39b15b9b4d95761690595b7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 0
+  speed: 7
+  playerNumber: 7
+  rb: {fileID: 902174357215677970}
+  floor:
+    serializedVersion: 2
+    m_Bits: 512
+  distanceRay: 1
+  downDistanceRay: 0.5
   miraArriba: {fileID: 243683414}
   miraIzquierda: {fileID: 692343407}
   miraDerecha: {fileID: 728312243}
   Mira: {fileID: 1300234832}
+--- !u!114 &8412767992992674857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412767992992674855}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4792a28e13b4124fbc7010256fef79f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpawnPoint: {fileID: 1300234832}
+  bulletPrefab: {fileID: 6737956627301323433, guid: b89e98c8e191d864a8f82a864b65eb6e,
+    type: 3}
+  bulletSpeed: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
