@@ -32,15 +32,18 @@ public class ControllerMira : Controller_Player
         if (Input.GetKeyDown(KeyCode.W))
         {
             Mira.position = miraArriba.position;
+            Mira.rotation = miraArriba.rotation;
             
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
             Mira.position = miraIzquierda.position;
+            Mira.rotation = miraIzquierda.rotation;
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             Mira.position = miraDerecha.position;
+            Mira.rotation = miraDerecha.rotation;
         }
     }
 }

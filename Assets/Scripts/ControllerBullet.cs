@@ -15,7 +15,7 @@ public class ControllerBullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        
     }
     
    
