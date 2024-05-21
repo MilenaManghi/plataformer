@@ -5,7 +5,9 @@ using UnityEngine;
 public class ControllerBotton : MonoBehaviour
 {
     public GameObject Puerta;
+    public GameObject Puerta2;
     private Rigidbody rb;
+    
 
     public bool Open;
 
@@ -21,10 +23,12 @@ public class ControllerBotton : MonoBehaviour
         if(Open == true)
         {
             Puerta.SetActive(false);
+            Puerta2.SetActive(false);
         }
-        else
+        if(Open==false)
         {
             Puerta.SetActive(true);
+            Puerta2.SetActive(true);
         }
     }
     public void OnCollisionEnter(Collision col)
