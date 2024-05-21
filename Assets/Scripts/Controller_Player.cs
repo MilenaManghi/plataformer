@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Controller_Player : MonoBehaviour
@@ -149,6 +150,9 @@ public class Controller_Player : MonoBehaviour
         {
             Destroy(this.gameObject);
             GameManager.gameOver = true;
+
+            Time.timeScale = 1;
+            SceneManager.LoadScene(0);
         }
         if (collision.gameObject.CompareTag("Floor"))
         {

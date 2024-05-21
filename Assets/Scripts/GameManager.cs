@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     {
         GetInput();
         CheckWin();
+        
 
     }
 
