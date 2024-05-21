@@ -25,6 +25,8 @@ public class Controller_Player : MonoBehaviour
     private bool canMoveLeft, canMoveRight,canJump;
     internal bool onFloor;
 
+    
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -152,11 +154,17 @@ public class Controller_Player : MonoBehaviour
             GameManager.gameOver = true;
 
             Time.timeScale = 1;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(GameManager.nivel);
         }
         if (collision.gameObject.CompareTag("Floor"))
         {
             onFloor = true;
+        }
+        if(collision.gameObject.CompareTag("Meta"))
+        {
+            Time.timeScale = 1;
+            GameManager.nivel = +1;
+            SceneManager.LoadScene(GameManager.nivel);
         }
 
     }

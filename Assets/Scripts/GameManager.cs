@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public int cantJugadores;
 
+    public static int nivel;
+
     void Start()
     {
         Physics.gravity = new Vector3(0, -30, 0);
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
         
 
     }
+    
 
     private void CheckWin()
     {
