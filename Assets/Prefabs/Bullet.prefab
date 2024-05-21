@@ -57,6 +57,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+  Portal: {fileID: 6940176724639115905, guid: bd6b04432156ad9468d7a42d7ac502e1, type: 3}
 --- !u!23 &2533612992040699518
 MeshRenderer:
   m_ObjectHideFlags: 0

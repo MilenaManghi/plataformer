@@ -15,12 +15,15 @@ public class GameManager : MonoBehaviour
 
     public List<Controller_Player> players;
 
+    public int cantJugadores;
+
     void Start()
     {
         Physics.gravity = new Vector3(0, -30, 0);
         gameOver = false;
         winCondition = false;
         SetConstraits();
+        
     }
 
     void Update()
@@ -41,7 +44,7 @@ public class GameManager : MonoBehaviour
                 //Debug.Log(i.ToString());
             }
         }
-        if (i >= 7)
+        if (i >= cantJugadores)
         {
             winCondition = true;
         }
@@ -53,7 +56,7 @@ public class GameManager : MonoBehaviour
         {
             if (actualPlayer <= 0)
             {
-                actualPlayer = 7;
+                actualPlayer = cantJugadores;
                 SetConstraits();
             }
             else
@@ -64,7 +67,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (actualPlayer >= 7)
+            if (actualPlayer >= cantJugadores)
             {
                 actualPlayer = 0;
                 SetConstraits();

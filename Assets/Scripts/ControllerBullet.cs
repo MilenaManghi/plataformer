@@ -5,6 +5,7 @@ using UnityEngine;
 public class ControllerBullet : MonoBehaviour
 {
     public float life = 3;
+    public GameObject Portal;
 
   
 
@@ -15,8 +16,17 @@ public class ControllerBullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        
+        if(collision.gameObject.tag == "Lunar")
+        {
+            var portal = Instantiate(Portal);
+            Destroy(this.gameObject);
+        }
     }
+
+
+
+
+
     
    
 }
